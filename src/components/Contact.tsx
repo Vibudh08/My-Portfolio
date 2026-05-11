@@ -139,7 +139,7 @@ export function Contact() {
                   {statusMessage}
                 </p>
               ) : (
-                <p className="mt-4 text-sm text-slate-500">Messages are sent directly to the inbox.</p>
+                <p className="mt-4 text-sm text-slate-500">Your message will reach me by email after submit.</p>
               )}
             </div>
           </form>
