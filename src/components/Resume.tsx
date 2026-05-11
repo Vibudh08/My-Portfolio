@@ -19,7 +19,8 @@ export function Resume() {
             </p>
             <a
               href={profile.resumeUrl}
-              download
+              target="_blank"
+              rel="noreferrer"
               className="mt-7 inline-flex items-center gap-2 rounded-lg bg-teal-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-teal-200"
             >
               Download Resume

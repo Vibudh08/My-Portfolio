@@ -64,8 +64,8 @@ export function Contact() {
                 <a
                   key={link.label}
                   href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                  target={link.href.startsWith("#") ? undefined : "_blank"}
+                  rel={link.href.startsWith("#") ? undefined : "noreferrer"}
                   className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition hover:-translate-y-0.5 hover:border-teal-300/30 hover:bg-white/[0.06]"
                 >
                   <span className="rounded-lg bg-teal-300/10 p-3 text-teal-200">

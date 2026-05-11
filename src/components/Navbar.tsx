@@ -29,7 +29,8 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href={profile.resumeUrl}
-            download
+            target="_blank"
+            rel="noreferrer"
             className="hidden items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/15 md:inline-flex"
           >
             <Download className="h-4 w-4" />

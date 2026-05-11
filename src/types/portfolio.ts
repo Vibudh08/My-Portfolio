@@ -25,6 +25,8 @@ export type Project = {
   title: string;
   description: string;
   impact: string;
+  imageUrl: string;
+  imageAlt: string;
   techStack: string[];
   githubUrl: string;
   liveUrl: string;

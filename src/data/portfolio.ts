@@ -164,6 +164,8 @@ export const projects: Project[] = [
       "A full-stack event booking platform with authentication, payment handling, booking workflows, and role-specific dashboards.",
     impact:
       "Supports real booking operations through Razorpay payments, email notifications, event search, filters, cancellations, seat tracking, and admin management.",
+    imageUrl: "/eventora.png",
+    imageAlt: "Eventora event booking platform dashboard screenshot",
     techStack: [
       "React",
       "Node.js",
@@ -182,6 +184,8 @@ export const projects: Project[] = [
       "A feedback management and public roadmap platform for collecting, prioritizing, and tracking product feedback.",
     impact:
       "Includes feedback submission, voting, comments, category filtering, public roadmap tracking, and an RBAC admin dashboard for status updates.",
+    imageUrl: "/feedback.png",
+    imageAlt: "Feedback Fusion product feedback and roadmap screenshot",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -199,6 +203,8 @@ export const projects: Project[] = [
       "A MERN job-management application with protected dashboard routes, authentication, job CRUD flows, profile management, admin views, and analytics.",
     impact:
       "Implements a production-style Express API with MongoDB, JWT auth, cookies, validation, secure middleware, Cloudinary uploads, and a Vite React dashboard using React Router loaders/actions.",
+    imageUrl: "/jobify.png",
+    imageAlt: "Jobify job management dashboard screenshot",
     techStack: [
       "React",
       "Vite",
@@ -219,6 +225,8 @@ export const projects: Project[] = [
       "A modern e-commerce frontend with product listing, product detail, cart/checkout flow, user dashboard, wishlist, blog pages, and policy/help pages.",
     impact:
       "Built a large routed React application with private routes, order tracking, responsive shopping flows, payment-ready UI, smooth interactions, and reusable commerce components.",
+    imageUrl: "/admirer.png",
+    imageAlt: "Admirer e-commerce storefront screenshot",
     techStack: [
       "React",
       "TypeScript",
