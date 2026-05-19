@@ -145,7 +145,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "BTJ Alpha Technology",
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     duration: "Jul 2024 - Oct 2025",
     location: "Noida",
     bullets: [
