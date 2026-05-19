@@ -106,7 +106,7 @@ export function Hero() {
                   Admirer, Non Brokerage, and company website frontend work.
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {["React", "Tailwind", "MongoDB"].map((item) => (
+                  {["React.js", "Node.js", "MongoDB"].map((item) => (
                     <span key={item} className="rounded-md bg-slate-950/45 px-2 py-1 text-[11px] text-slate-300">
                       {item}
                     </span>
