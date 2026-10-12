@@ -10,12 +10,13 @@ export function TechStrip() {
           Core Stack
         </p>
         <div className="relative min-w-0 overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#090d16] to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#090d16] to-transparent" />
+          <div className="ticker-fade pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#090d16] to-transparent" />
+          <div className="ticker-fade pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#090d16] to-transparent" />
           <div className="ticker flex w-max gap-3">
             {[...featuredTech, ...featuredTech].map((tech, index) => (
               <span
                 key={`${tech}-${index}`}
+                aria-hidden={index >= featuredTech.length ? true : undefined}
                 className="shrink-0 rounded-lg border border-white/10 bg-slate-950/60 px-4 py-2 text-sm font-medium text-slate-300"
               >
                 {tech}

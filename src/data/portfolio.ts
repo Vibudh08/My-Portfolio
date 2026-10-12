@@ -131,6 +131,16 @@ export const skills: SkillCategory[] = [
 
 export const experiences: Experience[] = [
   {
+    company: "Clickseon",
+    role: "Full Stack Developer",
+    duration: "Jun 2026 - Present",
+    location: "Hybrid",
+    bullets: [
+      "Improved website performance and PageSpeed scores to 90+ across multiple client websites by optimizing Core Web Vitals, LCP elements, image and media loading, render-blocking resources, JavaScript/CSS execution, and third-party scripts.",
+      "Refactored website structure, fixed layout, responsiveness, navigation, and functional issues, and optimized reusable components and UI/UX for better stability and maintainability.",
+    ],
+  },
+  {
     company: "Suntek.ai",
     role: "Full Stack Developer",
     duration: "Oct 2025 - May 2026",
@@ -164,7 +174,7 @@ export const projects: Project[] = [
       "A full-stack event booking platform with authentication, payment handling, booking workflows, and role-specific dashboards.",
     impact:
       "Supports real booking operations through Razorpay payments, email notifications, event search, filters, cancellations, seat tracking, and admin management.",
-    imageUrl: "/eventora.png",
+    imageUrl: "/eventora.webp",
     imageAlt: "Eventora event booking platform dashboard screenshot",
     techStack: [
       "React",
@@ -176,7 +186,6 @@ export const projects: Project[] = [
       "Nodemailer",
     ],
     githubUrl: "https://github.com/Vibudh08/eventora",
-    liveUrl: "#",
   },
   {
     title: "Feedback Fusion",
@@ -184,7 +193,7 @@ export const projects: Project[] = [
       "A feedback management and public roadmap platform for collecting, prioritizing, and tracking product feedback.",
     impact:
       "Includes feedback submission, voting, comments, category filtering, public roadmap tracking, and an RBAC admin dashboard for status updates.",
-    imageUrl: "/feedback.png",
+    imageUrl: "/feedback.webp",
     imageAlt: "Feedback Fusion product feedback and roadmap screenshot",
     techStack: [
       "Next.js",
@@ -203,7 +212,7 @@ export const projects: Project[] = [
       "A MERN job-management application with protected dashboard routes, authentication, job CRUD flows, profile management, admin views, and analytics.",
     impact:
       "Implements a production-style Express API with MongoDB, JWT auth, cookies, validation, secure middleware, Cloudinary uploads, and a Vite React dashboard using React Router loaders/actions.",
-    imageUrl: "/jobify.png",
+    imageUrl: "/jobify.webp",
     imageAlt: "Jobify job management dashboard screenshot",
     techStack: [
       "React",
@@ -217,7 +226,6 @@ export const projects: Project[] = [
       "Recharts",
     ],
     githubUrl: "https://github.com/Vibudh08/Jobify",
-    liveUrl: "#",
   },
   {
     title: "Admirer",
@@ -225,7 +233,7 @@ export const projects: Project[] = [
       "A modern e-commerce frontend with product listing, product detail, cart/checkout flow, user dashboard, wishlist, blog pages, and policy/help pages.",
     impact:
       "Built a large routed React application with private routes, order tracking, responsive shopping flows, payment-ready UI, smooth interactions, and reusable commerce components.",
-    imageUrl: "/admirer.png",
+    imageUrl: "/admirer.webp",
     imageAlt: "Admirer e-commerce storefront screenshot",
     techStack: [
       "React",
@@ -236,8 +244,29 @@ export const projects: Project[] = [
       "Razorpay",
       "React Router",
     ],
-    githubUrl: "https://github.com/Vibudh08/AdmirerFrontend",
     liveUrl: "https://admirer.in/",
+  },
+  {
+    title: "BTJ Alpha Technology",
+    description:
+      "A React company website showcasing IT and digital marketing services, technology expertise, industry solutions, and a project portfolio.",
+    impact:
+      "Developed the company website with service navigation, a consultation enquiry form, interactive service tabs, and expandable information sections to help visitors explore offerings and get in touch.",
+    imageUrl: "/btj-alpha.webp",
+    imageAlt: "BTJ Alpha Technology homepage with digital services and consultation form",
+    techStack: ["React", "Company Website", "Interactive UI", "Enquiry Forms"],
+    liveUrl: "https://btjalphatechnology.com/",
+  },
+  {
+    title: "The Manatomy",
+    description:
+      "A Shopify menswear store with featured collections, product options, customer reviews, search, cart, and editorial content.",
+    impact:
+      "Contributed technical SEO work, storefront enhancements, and improvements to the existing e-commerce website and shopping experience.",
+    imageUrl: "/manatomy.webp",
+    imageAlt: "The Manatomy Shopify menswear storefront homepage",
+    techStack: ["Shopify", "Technical SEO", "E-commerce", "Storefront Enhancements"],
+    liveUrl: "https://themanatomy.com/",
   },
 ];
 

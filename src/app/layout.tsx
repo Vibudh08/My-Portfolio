@@ -5,6 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vibudh-portfolio.vercel.app"),
+  alternates: { canonical: "/" },
   title: "Vibudh Rathore | Full Stack Developer",
   description:
     "Portfolio of Vibudh Rathore, a Full Stack Developer building SaaS, e-commerce, workflow applications, REST APIs, RBAC systems, and responsive products with Next.js, React, Node.js, PostgreSQL, MongoDB, Prisma, and Shopify Liquid.",
@@ -26,13 +28,15 @@ export const metadata: Metadata = {
     title: "Vibudh Rathore | Full Stack Developer",
     description:
       "Modern full-stack portfolio featuring SaaS, e-commerce, workflow systems, APIs, RBAC, and responsive web applications.",
-    url: "https://github.com/Vibudh08",
+    url: "/",
+    images: [{ url: "/social-preview.png", width: 1200, height: 630, alt: "Vibudh Rathore - Full Stack Developer" }],
     siteName: "Vibudh Rathore Portfolio",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    images: [{ url: "/social-preview.png", alt: "Vibudh Rathore - Full Stack Developer" }],
     title: "Vibudh Rathore | Full Stack Developer",
     description: "Full Stack Developer specializing in Next.js, React, Node.js, PostgreSQL, MongoDB, and Shopify Liquid.",
   },

@@ -9,7 +9,7 @@ export function Resume() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative">
             <div className="absolute -right-2 -top-4 hidden rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-xs font-semibold text-teal-100 backdrop-blur md:block">
-              PDF ready at /resume.pdf
+              Download as PDF
             </div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-300">Resume</p>
             <h2 className="mt-3 text-3xl font-semibold text-white md:text-5xl">A compact snapshot of full-stack delivery.</h2>
@@ -31,7 +31,7 @@ export function Resume() {
             <div className="rounded-xl border border-white/10 bg-slate-950/55 p-5">
               <div className="mb-4 flex items-center justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Resume Preview</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Career Highlights</p>
                   <h3 className="mt-1 text-xl font-semibold text-white">Vibudh Rathore</h3>
                 </div>
                 <span className="rounded-lg bg-teal-300/10 px-3 py-2 text-xs font-semibold text-teal-100">MCA</span>

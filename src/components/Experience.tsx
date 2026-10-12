@@ -9,7 +9,7 @@ export function Experience() {
         <SectionHeader
           eyebrow="Experience"
           title="Recent product engineering work."
-          description="Professional experience rewritten from the resume with practical impact and clear ownership."
+          description="Building and improving SaaS platforms, e-commerce applications, and client websites from development through delivery."
         />
         <div className="relative space-y-6 before:absolute before:left-4 before:top-4 before:h-[calc(100%-2rem)] before:w-px before:bg-white/10 md:before:left-6">
           {experiences.map((experience) => (

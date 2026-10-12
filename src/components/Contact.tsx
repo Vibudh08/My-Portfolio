@@ -1,7 +1,7 @@
 "use client";
 
 import { Send } from "lucide-react";
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useRef, useState } from "react";
 import { contactLinks, profile } from "@/data/portfolio";
 import { MotionSection } from "@/components/MotionSection";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -9,35 +9,55 @@ import { SectionHeader } from "@/components/SectionHeader";
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
+  const isSubmitting = useRef(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (isSubmitting.current) return;
+    isSubmitting.current = true;
     setStatus("loading");
     setStatusMessage("");
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        projectType: formData.get("projectType"),
-        message: formData.get("message"),
-      }),
-    });
-    const result = (await response.json()) as { message?: string };
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 20000);
 
-    if (!response.ok) {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        signal: controller.signal,
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          projectType: formData.get("projectType"),
+          message: formData.get("message"),
+        }),
+      });
+      const result: unknown = await response.json();
+      const message = result && typeof result === "object" && "message" in result && typeof result.message === "string"
+        ? result.message
+        : undefined;
+
+      if (!response.ok) {
+        setStatus("error");
+        setStatusMessage(message || "Unable to send your message. Please try again or email me directly.");
+        return;
+      }
+
+      form.reset();
+      setStatus("success");
+      setStatusMessage(message || "Message sent successfully. Thanks for reaching out!");
+    } catch {
       setStatus("error");
-      setStatusMessage(result.message ?? "Unable to send message right now.");
-      return;
+      setStatusMessage(controller.signal.aborted
+        ? "This is taking longer than expected. Delivery could not be confirmed. Please try again later or email me directly."
+        : "Delivery could not be confirmed. Check your connection and try again, or email me directly.");
+    } finally {
+      window.clearTimeout(timeout);
+      isSubmitting.current = false;
     }
-
-    form.reset();
-    setStatus("success");
-    setStatusMessage(result.message ?? "Message sent successfully.");
   }
 
   return (
@@ -81,6 +101,7 @@ export function Contact() {
           </div>
           <form
             onSubmit={handleSubmit}
+            aria-busy={status === "loading"}
             className="relative overflow-hidden rounded-2xl border border-white/10 bg-panel/80 p-6 shadow-card md:p-8"
           >
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-sky-400/10 blur-3xl" />
@@ -131,15 +152,16 @@ export function Contact() {
                 disabled={status === "loading"}
                 className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-teal-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-200 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
               >
-                {status === "loading" ? "Sending..." : "Send Message"}
+                {status === "loading" ? "Sending..." : status === "error" ? "Try Again" : "Send Message"}
                 <Send className="h-4 w-4" />
               </button>
-              {statusMessage ? (
-                <p className={`mt-4 text-sm ${status === "success" ? "text-teal-200" : "text-rose-300"}`}>
-                  {statusMessage}
-                </p>
-              ) : (
-                <p className="mt-4 text-sm text-slate-500">Your message will reach me by email after submit.</p>
+              <p role="status" aria-live="polite" aria-atomic="true" className={`mt-4 text-sm ${status === "success" ? "text-teal-200" : status === "error" ? "text-rose-300" : "text-slate-400"}`}>
+                {statusMessage || (status === "loading" ? "Sending your message..." : "Have a role or project in mind? Send me a message.")}
+              </p>
+              {status === "error" && (
+                <a href={`mailto:${profile.email}`} className="mt-2 inline-block text-sm text-teal-200 underline underline-offset-4">
+                  Email me directly
+                </a>
               )}
             </div>
           </form>

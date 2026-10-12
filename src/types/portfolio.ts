@@ -28,8 +28,8 @@ export type Project = {
   imageUrl: string;
   imageAlt: string;
   techStack: string[];
-  githubUrl: string;
-  liveUrl: string;
+  githubUrl?: string;
+  liveUrl?: string;
 };
 
 export type Highlight = {
