@@ -13,11 +13,11 @@ export function Projects() {
           title="Real-world builds with end-to-end workflows."
           description="Selected portfolio projects focused on jobs, e-commerce, booking, feedback operations, payments, authentication, admin workflows, and product visibility."
         />
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-panel/95 p-6 shadow-card transition hover:-translate-y-1 hover:border-teal-300/30 md:p-8"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-panel/95 p-5 shadow-card transition hover:-translate-y-1 hover:border-teal-300/30 sm:p-6"
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-300/60 to-transparent opacity-0 transition group-hover:opacity-100" />
               <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-slate-950">
@@ -26,17 +26,17 @@ export function Projects() {
                     src={project.imageUrl}
                     alt={project.imageAlt}
                     fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
-                  <div className="absolute bottom-5 left-5 right-5">
-                    <p className="text-sm uppercase tracking-[0.22em] text-teal-200">Featured Project</p>
-                    <h3 className="mt-2 text-3xl font-semibold text-white">{project.title}</h3>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-xs uppercase tracking-[0.16em] text-teal-200">Featured Project</p>
+                    <h3 className="mt-2 text-xl font-semibold leading-tight text-white xl:text-2xl">{project.title}</h3>
                   </div>
                 </div>
               </div>
-              <p className="text-lg leading-7 text-slate-300">{project.description}</p>
+              <p className="text-base leading-7 text-slate-300">{project.description}</p>
               <p className="mt-4 text-sm leading-6 text-slate-400">{project.impact}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {project.techStack.map((tech) => (
@@ -45,7 +45,7 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-auto flex flex-wrap gap-3 pt-7">
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
