@@ -22,7 +22,9 @@ html {
   border: 1px solid transparent;
   border-bottom-color: rgba(255, 255, 255, 0.1);
   border-radius: 0;
-  background: rgba(7, 11, 19, 0.75);
+  background: rgba(7, 11, 19, 0.55);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  backdrop-filter: blur(12px) saturate(160%);
   transition:
     width 450ms cubic-bezier(0.22, 1, 0.36, 1),
     top 450ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -37,9 +39,6 @@ html {
   width: calc(100% - 24px);
   border-radius: 28px;
   border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(7, 11, 19, 0.55);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-  backdrop-filter: blur(12px) saturate(160%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.16),
     inset 0 -1px 0 rgba(255, 255, 255, 0.04),
@@ -100,15 +99,46 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(45, 212, 191, 0.12), transparent 32rem),
-    radial-gradient(circle at top right, rgba(96, 165, 250, 0.1), transparent 34rem),
-    #070b13;
+  background: #070b13;
+}
+
+.portfolio-background {
+  position: relative;
+  isolation: isolate;
+  background-color: #070b13;
+}
+
+.portfolio-background::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(148, 163, 184, 0.1188) 1.1px, transparent 1.3px),
+    radial-gradient(ellipse at 8% 30%, rgba(14, 165, 233, 0.1452), transparent 62%),
+    radial-gradient(ellipse at 92% 55%, rgba(59, 130, 246, 0.132), transparent 62%),
+    radial-gradient(ellipse at 50% 100%, rgba(96, 165, 250, 0.0462), transparent 55%);
+  background-size: 32px 32px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 16px 16px, center, center, center;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+}
+
+@media (max-width: 639px) {
+  .portfolio-background::before {
+    background-size: 26px 26px, 100% 100%, 100% 100%, 100% 100%;
+    background-position: 13px 13px, center, center, center;
+  }
 }
 
 ::selection {
   background: rgba(45, 212, 191, 0.32);
   color: #ffffff;
+}
+
+.ticker-window {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
 }
 
 .ticker {
@@ -150,7 +180,12 @@ body {
     transform: none;
   }
 
-  .ticker [aria-hidden="true"], .ticker-fade {
+  .ticker-window {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .ticker [aria-hidden="true"] {
     display: none;
   }
 

@@ -15,7 +15,7 @@ export function Skills() {
           {skills.map((category) => {
             const Icon = category.icon;
             return (
-              <article key={category.title} className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-white/[0.065]">
+              <article key={category.title} className="group rounded-2xl border border-white/10 bg-panel/95 p-6 transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-panel">
                 <div className="mb-5 flex items-center gap-3">
                   <div className="rounded-xl bg-teal-300/10 p-3 text-teal-200 transition group-hover:bg-teal-300/15">
                     <Icon className="h-5 w-5" />

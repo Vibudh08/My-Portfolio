@@ -6,10 +6,7 @@ const workflowCards = ["Backlog", "In Progress", "Review"];
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden px-4 pb-20 pt-32 sm:px-6 lg:px-8 lg:pb-28 lg:pt-36">
-      <div className="absolute inset-0 -z-10 bg-grid bg-[length:42px_42px] opacity-45" />
       <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-teal-300/60 to-transparent" />
-      <div className="absolute left-1/3 top-20 -z-10 h-96 w-96 rounded-full bg-teal-400/16 blur-3xl" />
-      <div className="absolute right-0 top-44 -z-10 h-96 w-96 rounded-full bg-sky-500/14 blur-3xl" />
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.88fr_1.12fr]">
         <div>
           <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-lg border border-teal-300/20 bg-teal-300/10 px-3 py-2 text-sm text-teal-100">
@@ -53,7 +50,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-3 shadow-card backdrop-blur">
+        <div className="rounded-2xl border border-white/10 bg-panel/95 p-3 shadow-card">
           <div className="grid gap-3 xl:grid-cols-[1.15fr_0.85fr]">
             <div className="rounded-xl border border-white/10 bg-slate-950/85 p-5">
               <div className="mb-5 flex items-center gap-2">

@@ -10,7 +10,7 @@ import { TechStrip } from "@/components/TechStrip";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-ink text-white">
+    <main className="portfolio-background min-h-screen overflow-hidden text-white">
       <Navbar />
       <Hero />
       <TechStrip />

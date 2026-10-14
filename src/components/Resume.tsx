@@ -5,7 +5,7 @@ import { MotionSection } from "@/components/MotionSection";
 export function Resume() {
   return (
     <MotionSection id="resume" className="px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(20,184,166,0.14),rgba(15,23,42,0.92)_42%,rgba(59,130,246,0.14))] p-6 shadow-card md:p-10">
+      <div className="mx-auto max-w-7xl rounded-2xl border border-white/10 bg-panel/95 p-6 shadow-card md:p-10">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative">
             <div className="absolute -right-2 -top-4 hidden rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-xs font-semibold text-teal-100 backdrop-blur md:block">

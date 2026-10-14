@@ -84,7 +84,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header ref={headerRef} className="site-header fixed z-50 backdrop-blur-xl" data-scrolled={isScrolled}>
+    <header ref={headerRef} className="site-header fixed z-50" data-scrolled={isScrolled}>
       <nav aria-label="Main navigation" className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
         <a href="#home" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3">
           <span className="grid h-10 w-10 place-items-center rounded-lg border border-teal-300/30 bg-teal-300/10 text-sm font-bold text-teal-200">

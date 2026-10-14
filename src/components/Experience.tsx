@@ -15,7 +15,7 @@ export function Experience() {
           {experiences.map((experience) => (
             <article key={experience.company} className="relative pl-12 md:pl-16">
               <span className="absolute left-0 top-2 h-8 w-8 rounded-lg border border-teal-300/30 bg-teal-300/10 md:left-2" />
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-white/[0.06]">
+              <div className="rounded-2xl border border-white/10 bg-panel/95 p-6 transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-panel">
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold text-white">{experience.role}</h3>

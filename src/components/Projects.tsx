@@ -17,7 +17,7 @@ export function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-panel/80 p-6 shadow-card transition hover:-translate-y-1 hover:border-teal-300/30 md:p-8"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-panel/95 p-6 shadow-card transition hover:-translate-y-1 hover:border-teal-300/30 md:p-8"
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-300/60 to-transparent opacity-0 transition group-hover:opacity-100" />
               <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-slate-950">

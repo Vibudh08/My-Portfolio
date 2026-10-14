@@ -12,8 +12,8 @@ export function About() {
           description="I work across frontend, backend, database, and commerce workflows to ship practical software for SaaS, e-commerce, and internal product operations."
         />
         <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-panel/80 p-6 shadow-card md:p-8">
-            <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-teal-300/10 blur-3xl" />
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-panel/95 p-6 shadow-card md:p-8">
+            <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-sky-400/5 blur-3xl" />
             <p className="text-lg leading-8 text-slate-300">{profile.intro}</p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
               My work includes project management platforms, Shopify automation, event booking systems, feedback
@@ -27,7 +27,7 @@ export function About() {
               return (
                 <article
                   key={card.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-white/[0.07]"
+                  className="rounded-2xl border border-white/10 bg-panel/95 p-5 transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-panel"
                 >
                   <Icon className="mb-4 h-6 w-6 text-teal-200" />
                   <h3 className="text-lg font-semibold text-white">{card.title}</h3>

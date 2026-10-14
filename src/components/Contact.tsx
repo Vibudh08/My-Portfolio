@@ -70,7 +70,7 @@ export function Contact() {
         />
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="space-y-4">
-            <div className="rounded-2xl border border-teal-300/20 bg-teal-300/10 p-5 shadow-glow">
+            <div className="rounded-2xl border border-teal-300/20 bg-panel/95 p-5 shadow-card">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-100">Direct Contact</p>
               <h3 className="mt-3 text-2xl font-semibold text-white">Open to full-stack roles and client projects.</h3>
               <p className="mt-3 text-sm leading-6 text-teal-50/75">
@@ -86,7 +86,7 @@ export function Contact() {
                   href={link.href}
                   target={link.href.startsWith("#") ? undefined : "_blank"}
                   rel={link.href.startsWith("#") ? undefined : "noreferrer"}
-                  className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition hover:-translate-y-0.5 hover:border-teal-300/30 hover:bg-white/[0.06]"
+                  className="flex items-center gap-4 rounded-2xl border border-white/10 bg-panel/95 p-4 transition hover:-translate-y-0.5 hover:border-teal-300/30 hover:bg-panel"
                 >
                   <span className="rounded-lg bg-teal-300/10 p-3 text-teal-200">
                     <Icon className="h-5 w-5" />
@@ -102,7 +102,7 @@ export function Contact() {
           <form
             onSubmit={handleSubmit}
             aria-busy={status === "loading"}
-            className="relative overflow-hidden rounded-2xl border border-white/10 bg-panel/80 p-6 shadow-card md:p-8"
+            className="relative overflow-hidden rounded-2xl border border-white/10 bg-panel/95 p-6 shadow-card md:p-8"
           >
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-sky-400/10 blur-3xl" />
             <div className="relative">
