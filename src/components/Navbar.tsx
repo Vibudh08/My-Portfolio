@@ -87,14 +87,14 @@ export function Navbar() {
     <header ref={headerRef} className="site-header fixed z-50" data-scrolled={isScrolled}>
       <nav aria-label="Main navigation" className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
         <a href="#home" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-lg border border-teal-300/30 bg-teal-300/10 text-sm font-bold text-teal-200">
+          <span className="grid h-10 w-10 place-items-center rounded-lg border border-cyan-300/30 bg-cyan-300/10 text-sm font-bold text-cyan-200">
             VR
           </span>
           <span className="hidden text-sm font-semibold text-white sm:block">Vibudh Rathore</span>
         </a>
         <div className="hidden items-center gap-4 xl:gap-6 lg:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} aria-current={activeSection === item.href.slice(1) ? "location" : undefined} className="nav-link relative text-sm text-slate-300 transition-colors hover:text-teal-200 focus-visible:text-teal-200">
+            <a key={item.href} href={item.href} aria-current={activeSection === item.href.slice(1) ? "location" : undefined} className="nav-link relative text-sm text-slate-300 transition-colors hover:text-cyan-200 focus-visible:text-cyan-200">
               {item.label}
             </a>
           ))}
@@ -114,7 +114,7 @@ export function Navbar() {
             aria-label="GitHub"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-white/10 p-2 text-slate-300 transition hover:border-teal-300/40 hover:text-teal-200"
+            className="rounded-lg border border-white/10 p-2 text-slate-300 transition hover:border-cyan-300/40 hover:text-cyan-200"
           >
             <Github className="h-4 w-4" />
           </a>
@@ -123,7 +123,7 @@ export function Navbar() {
             aria-label="LinkedIn"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-white/10 p-2 text-slate-300 transition hover:border-teal-300/40 hover:text-teal-200"
+            className="rounded-lg border border-white/10 p-2 text-slate-300 transition hover:border-cyan-300/40 hover:text-cyan-200"
           >
             <Linkedin className="h-4 w-4" />
           </a>
@@ -135,7 +135,7 @@ export function Navbar() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsMenuOpen((open) => !open)}
-          className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/5 text-teal-200 transition-colors hover:border-teal-300/40 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-200 lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/5 text-cyan-200 transition-colors hover:border-cyan-300/40 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-200 lg:hidden"
         >
           {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -155,19 +155,19 @@ export function Navbar() {
             href={item.href}
             onClick={() => setIsMenuOpen(false)}
             aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
-            className="nav-link relative block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-teal-200 focus-visible:text-teal-200"
+            className="nav-link relative block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-cyan-200 focus-visible:text-cyan-200"
           >
             {item.label}
           </a>
         ))}
         <div className="mt-2 flex items-center gap-3 border-t border-white/10 px-2 pt-3">
-          <a href={profile.resumeUrl} target="_blank" rel="noreferrer" onClick={() => setIsMenuOpen(false)} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-teal-300 px-3 text-sm font-semibold text-slate-950 hover:bg-teal-200">
+          <a href={profile.resumeUrl} target="_blank" rel="noreferrer" onClick={() => setIsMenuOpen(false)} className="primary-action inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl px-3 text-sm font-semibold">
             <Download className="h-4 w-4" /> Resume
           </a>
-          <a href={profile.github} aria-label="GitHub" target="_blank" rel="noreferrer" onClick={() => setIsMenuOpen(false)} className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-slate-300 hover:border-teal-300/40 hover:text-teal-200">
+          <a href={profile.github} aria-label="GitHub" target="_blank" rel="noreferrer" onClick={() => setIsMenuOpen(false)} className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-slate-300 hover:border-cyan-300/40 hover:text-cyan-200">
             <Github className="h-5 w-5" />
           </a>
-          <a href={profile.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer" onClick={() => setIsMenuOpen(false)} className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-slate-300 hover:border-teal-300/40 hover:text-teal-200">
+          <a href={profile.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer" onClick={() => setIsMenuOpen(false)} className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-slate-300 hover:border-cyan-300/40 hover:text-cyan-200">
             <Linkedin className="h-5 w-5" />
           </a>
         </div>

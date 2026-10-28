@@ -1,33 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="background" x2="1" y2="1">
-      <stop stop-color="#123432"/>
-      <stop offset=".55" stop-color="#0b1220"/>
-      <stop offset="1" stop-color="#14253a"/>
+      <stop stop-color="#21133f"/>
+      <stop offset=".55" stop-color="#090d20"/>
+      <stop offset="1" stop-color="#10284d"/>
     </linearGradient>
-    <linearGradient id="accent"><stop stop-color="#99f6e4"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#9b6cff"/><stop offset="1" stop-color="#29d5f6"/></linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="#070b13"/>
-  <rect x="24" y="24" width="1152" height="582" rx="32" fill="url(#background)" stroke="#2b424d"/>
+  <rect width="1200" height="630" fill="#060814"/>
+  <rect x="24" y="24" width="1152" height="582" rx="32" fill="url(#background)" stroke="#34355d"/>
   <g font-family="Arial, sans-serif">
-    <rect x="76" y="72" width="68" height="68" rx="18" fill="#153e3e" stroke="#5eead4" stroke-opacity=".5"/>
-    <text x="110" y="116" text-anchor="middle" font-size="26" font-weight="700" fill="#99f6e4">VR</text>
+    <rect x="76" y="72" width="68" height="68" rx="18" fill="#191337" stroke="#8b5cf6" stroke-opacity=".6"/>
+    <text x="110" y="116" text-anchor="middle" font-size="26" font-weight="700" fill="#a78bfa">VR</text>
     <text x="166" y="113" font-size="19" letter-spacing="4" fill="#cbd5e1">DEVELOPER PORTFOLIO</text>
     <text x="76" y="245" font-size="68" font-weight="700" fill="#f8fafc">Vibudh Rathore</text>
     <text x="76" y="318" font-size="48" font-weight="700" fill="url(#accent)">Full Stack Developer</text>
     <text x="78" y="376" font-size="25" fill="#cbd5e1">SaaS, commerce, and workflow applications.</text>
-    <g font-size="19" fill="#ccfbf1">
-      <rect x="76" y="421" width="127" height="44" rx="12" fill="#14312f" stroke="#2b5551"/>
+    <g font-size="19" fill="#dbeafe">
+      <rect x="76" y="421" width="127" height="44" rx="12" fill="#161b38" stroke="#3b4075"/>
       <text x="139" y="450" text-anchor="middle">Next.js</text>
-      <rect x="215" y="421" width="127" height="44" rx="12" fill="#14312f" stroke="#2b5551"/>
+      <rect x="215" y="421" width="127" height="44" rx="12" fill="#161b38" stroke="#3b4075"/>
       <text x="278" y="450" text-anchor="middle">React</text>
-      <rect x="354" y="421" width="127" height="44" rx="12" fill="#14312f" stroke="#2b5551"/>
+      <rect x="354" y="421" width="127" height="44" rx="12" fill="#161b38" stroke="#3b4075"/>
       <text x="417" y="450" text-anchor="middle">Node.js</text>
-      <rect x="493" y="421" width="158" height="44" rx="12" fill="#14312f" stroke="#2b5551"/>
+      <rect x="493" y="421" width="158" height="44" rx="12" fill="#161b38" stroke="#3b4075"/>
       <text x="572" y="450" text-anchor="middle">PostgreSQL</text>
     </g>
     <path d="M76 512H1124" stroke="#334155"/>
     <text x="76" y="553" font-size="22" fill="#94a3b8">vibudh-portfolio.vercel.app</text>
-    <text x="1124" y="553" text-anchor="end" font-size="19" fill="#99f6e4">Code. Build. Deliver.</text>
+    <text x="1124" y="553" text-anchor="end" font-size="19" fill="#7dd3fc">Code. Build. Deliver.</text>
   </g>
 </svg>

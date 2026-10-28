@@ -70,10 +70,10 @@ export function Contact() {
         />
         <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="space-y-4">
-            <div className="rounded-2xl border border-teal-300/20 bg-panel/95 p-5 shadow-card">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-100">Direct Contact</p>
+            <div className="rounded-2xl border border-cyan-300/20 bg-panel/95 p-5 shadow-card">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-100">Direct Contact</p>
               <h3 className="mt-3 text-2xl font-semibold text-white">Open to full-stack roles and client projects.</h3>
-              <p className="mt-3 text-sm leading-6 text-teal-50/75">
+              <p className="mt-3 text-sm leading-6 text-cyan-50/75">
                 Best fit: Next.js applications, SaaS dashboards, backend APIs, e-commerce workflows, and product UI
                 systems.
               </p>
@@ -86,9 +86,9 @@ export function Contact() {
                   href={link.href}
                   target={link.href.startsWith("#") ? undefined : "_blank"}
                   rel={link.href.startsWith("#") ? undefined : "noreferrer"}
-                  className="flex items-center gap-4 rounded-2xl border border-white/10 bg-panel/95 p-4 transition hover:-translate-y-0.5 hover:border-teal-300/30 hover:bg-panel"
+                  className="flex items-center gap-4 rounded-2xl border border-white/10 bg-panel/95 p-4 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-panel"
                 >
-                  <span className="rounded-lg bg-teal-300/10 p-3 text-teal-200">
+                  <span className="rounded-lg bg-cyan-300/10 p-3 text-cyan-200">
                     <Icon className="h-5 w-5" />
                   </span>
                   <span>
@@ -114,7 +114,7 @@ export function Contact() {
                     type="text"
                     placeholder="Your name"
                     required
-                    className="w-full rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-teal-300/50"
+                    className="w-full rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-300/50"
                   />
                 </label>
                 <label className="space-y-2">
@@ -124,7 +124,7 @@ export function Contact() {
                     type="email"
                     placeholder="you@example.com"
                     required
-                    className="w-full rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-teal-300/50"
+                    className="w-full rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-300/50"
                   />
                 </label>
               </div>
@@ -134,7 +134,7 @@ export function Contact() {
                   name="projectType"
                   type="text"
                   placeholder="SaaS dashboard, e-commerce app, API integration..."
-                  className="w-full rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-teal-300/50"
+                  className="w-full rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-300/50"
                 />
               </label>
               <label className="mt-4 block space-y-2">
@@ -144,22 +144,22 @@ export function Contact() {
                   rows={6}
                   placeholder={`Hi ${profile.name.split(" ")[0]}, I would like to discuss...`}
                   required
-                  className="w-full resize-none rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-teal-300/50"
+                  className="w-full resize-none rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-300/50"
                 />
               </label>
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-teal-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-200 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+                className="primary-action mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
               >
                 {status === "loading" ? "Sending..." : status === "error" ? "Try Again" : "Send Message"}
                 <Send className="h-4 w-4" />
               </button>
-              <p role="status" aria-live="polite" aria-atomic="true" className={`mt-4 text-sm ${status === "success" ? "text-teal-200" : status === "error" ? "text-rose-300" : "text-slate-400"}`}>
+              <p role="status" aria-live="polite" aria-atomic="true" className={`mt-4 text-sm ${status === "success" ? "text-cyan-200" : status === "error" ? "text-rose-300" : "text-slate-400"}`}>
                 {statusMessage || (status === "loading" ? "Sending your message..." : "Have a role or project in mind? Send me a message.")}
               </p>
               {status === "error" && (
-                <a href={`mailto:${profile.email}`} className="mt-2 inline-block text-sm text-teal-200 underline underline-offset-4">
+                <a href={`mailto:${profile.email}`} className="mt-2 inline-block text-sm text-cyan-200 underline underline-offset-4">
                   Email me directly
                 </a>
               )}

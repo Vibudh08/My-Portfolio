@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="bg" x1="8" y1="6" x2="58" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0f172a" />
-      <stop offset="1" stop-color="#020617" />
+      <stop stop-color="#171131" />
+      <stop offset="1" stop-color="#070b1d" />
     </linearGradient>
     <linearGradient id="accent" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#5eead4" />
-      <stop offset="0.55" stop-color="#7dd3fc" />
-      <stop offset="1" stop-color="#c4b5fd" />
+      <stop stop-color="#9b6cff" />
+      <stop offset="0.55" stop-color="#5378ff" />
+      <stop offset="1" stop-color="#29d5f6" />
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="16" fill="url(#bg)" />
@@ -30,6 +30,6 @@
     font-family="Inter, Segoe UI, Arial, sans-serif"
     font-size="34"
     font-weight="700"
-    fill="#e0f2fe"
+    fill="#eff6ff"
   >R</text>
 </svg>

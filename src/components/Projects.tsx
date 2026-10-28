@@ -17,9 +17,9 @@ export function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-panel/95 p-6 shadow-card transition hover:-translate-y-1 hover:border-teal-300/30 md:p-8"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-panel/95 p-6 shadow-card transition hover:-translate-y-1 hover:border-cyan-300/30 md:p-8"
             >
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-300/60 to-transparent opacity-0 transition group-hover:opacity-100" />
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent opacity-0 transition group-hover:opacity-100" />
               <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-slate-950">
                 <div className="relative aspect-[16/10]">
                   <Image
@@ -31,7 +31,7 @@ export function Projects() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
-                    <p className="text-sm uppercase tracking-[0.22em] text-teal-200">Featured Project</p>
+                    <p className="text-sm uppercase tracking-[0.22em] text-cyan-200">Featured Project</p>
                     <h3 className="mt-2 text-3xl font-semibold text-white">{project.title}</h3>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ export function Projects() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-teal-300/40 hover:text-teal-100"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-cyan-300/40 hover:text-cyan-100"
                   >
                     <Github className="h-4 w-4" />
                     GitHub

@@ -27,9 +27,9 @@ export function About() {
               return (
                 <article
                   key={card.title}
-                  className="rounded-2xl border border-white/10 bg-panel/95 p-5 transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-panel"
+                  className="rounded-2xl border border-white/10 bg-panel/95 p-5 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-panel"
                 >
-                  <Icon className="mb-4 h-6 w-6 text-teal-200" />
+                  <Icon className="mb-4 h-6 w-6 text-cyan-200" />
                   <h3 className="text-lg font-semibold text-white">{card.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-400">{card.description}</p>
                 </article>
